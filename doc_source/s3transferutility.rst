@@ -115,7 +115,9 @@ Pass your credentials provider to the S3 client constructor, like so::
 
   // Create an S3 client
   AmazonS3 s3 = new AmazonS3Client(credentialsProvider);
-
+  
+  //Important to set region you might get ssl error 
+  s3.setRegion(Region.getRegion(YOUR_REGION));
 
 
 Instantiate TransferUtility
